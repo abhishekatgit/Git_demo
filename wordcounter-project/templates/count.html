@@ -1,0 +1,23 @@
+<h1>The website has {{ count }} words.</h1>
+
+<a href="{% url 'home' %}">START AGAIN</a>
+<br>
+<a href="{% url 'about' %}">ABOUT WORDCOUNTER</a>
+
+<h2>Your Text :</h2>
+
+{{ fulltext }}
+
+
+
+<h1>word count :<h1>
+
+<!-- {{ myworddictionary }} -->
+
+{% for word,occurence in myworddictionary %}
+
+{{ word }}        --->      {{ occurence }}
+
+<br>
+
+{% endfor %}
